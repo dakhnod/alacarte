@@ -1,22 +1,22 @@
 dnl -*- Mode: autoconf -*-
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.53)
-AC_INIT(alacarte, 3.42.0, http://bugzilla.gnome.org/enter_bug.cgi?product=alacarte)
+AC_INIT(alacarte, 3.44.1, http://bugzilla.gnome.org/enter_bug.cgi?product=alacarte)
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 AC_CONFIG_SRCDIR(alacarte.in)
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([1.7 no-dist-gzip dist-xz])
 AM_MAINTAINER_MODE
 
-dnl put the ACLOCAL flags in the makefile
-ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
-
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
 
 GETTEXT_PACKAGE=alacarte
-AC_SUBST(GETTEXT_PACKAGE)
-AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package])
-AM_GLIB_GNU_GETTEXT
-IT_PROG_INTLTOOL([0.40.0])
+AC_SUBST([GETTEXT_PACKAGE])
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Gettext package])
 
 AM_PATH_PYTHON(3.3)
 
