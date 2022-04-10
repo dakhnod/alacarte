@@ -1,4 +1,28 @@
 ==============
+Version 3.44.1
+==============
+
+Changes:
+        * New release to fix install directory (#14)
+        * Use upstream gettext (!9)
+
+Translation updates:
+        * Portuguese
+
+==============
+Version 3.44.0
+==============
+
+Changes:
+        * Resync cmd line validity on focus gained (#10)
+        * Fix icon changing (#13)
+
+Translation updates:
+        * Czech
+        * Ukrainian
+        * Swedish
+
+==============
 Version 3.42.0
 ==============
 
